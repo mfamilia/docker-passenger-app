@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Serf agent Runit service
+
+# load environment variables
+exec 2>&1
+
+# start Serf agent
+exec /usr/local/bin/serf agent -config-dir=/etc/serf
