@@ -1,4 +1,4 @@
-FROM phusion/passenger-ruby22:0.9.17
+FROM phusion/passenger-ruby22:0.9.18
 
 USER root
 
