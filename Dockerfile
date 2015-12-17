@@ -35,4 +35,7 @@ RUN rm /etc/nginx/sites-enabled/default
 ADD configs/rails-env.conf /etc/nginx/main.d/rails-env.conf
 ADD configs/postgres-env.conf /etc/nginx/main.d/postgres-env.conf
 
+# Facilitates access when utilizing home mount
+RUN usermod -u 1000 -g 50 app
+
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
